@@ -88,11 +88,6 @@ data "azurerm_key_vault_secret" "idam_secret_probate" {
   vault_uri = "${data.azurerm_key_vault.probate_key_vault.vault_uri}"
 }
 
-data "azurerm_key_vault_secret" "s2s_key" {
-  name      = "microservicekey-probate-frontend"
-  vault_uri = "https://s2s-${local.localenv}.vault.azure.net/"
-}
-
 data "azurerm_key_vault_secret" "caveat_user_name" {
   name      = "caveat-user-name"
   vault_uri = "${data.azurerm_key_vault.probate_key_vault.vault_uri}"
@@ -101,6 +96,11 @@ data "azurerm_key_vault_secret" "caveat_user_name" {
 data "azurerm_key_vault_secret" "caveat_user_password" {
   name      = "caveat-user-password"
   vault_uri = "${data.azurerm_key_vault.probate_key_vault.vault_uri}"
+}
+
+data "azurerm_key_vault_secret" "s2s_key" {
+  name      = "microservicekey-probate-frontend"
+  vault_uri = "https://s2s-${local.localenv}.vault.azure.net/"
 }
 
 module "probate-caveats-fe" {
