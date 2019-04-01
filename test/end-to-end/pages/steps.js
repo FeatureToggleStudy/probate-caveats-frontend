@@ -8,7 +8,6 @@ module.exports = function () {
     return actor({
         // Start application
         startApplication: steps.startpage.startpage,
-
         enterApplicantName: steps.applicant.name,
         enterApplicantEmail: steps.applicant.email,
         enterApplicantAddressManually: steps.applicant.address,
@@ -20,15 +19,11 @@ module.exports = function () {
         enterDeceasedOtherNames: steps.deceased.othernames,
         enterDeceasedAddressManually: steps.deceased.address,
         seeSummaryPage: steps.summary.summary,
-
         // Payment
         seePaymentBreakdownPage: steps.payment.paymentbreakdown,
         seeGovUkPaymentPage: steps.payment.govukpayment,
         seeGovUkConfirmPage: steps.payment.govukconfirmpayment,
         seePaymentStatusPage: steps.payment.paymentstatus,
-
-        // enterPaymentBreakdown: steps.payment.breakdown,
-
         // Temp stop page to represent end of journey
         seeThankYouPage: steps.thankyou.thankyou
     });
