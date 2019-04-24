@@ -72,7 +72,7 @@ const createPayment = (data, hostname) => {
         'Content-Type': 'application/json',
         'Authorization': data.authToken,
         'ServiceAuthorization': data.serviceAuthToken,
-        'return-url': FormatUrl.format('https://probate.aat.platfrom.hmcts.net', config.services.payment.returnUrlPath)
+        'return-url': FormatUrl.format('https://probate.aat.platform.hmcts.net', config.services.payment.returnUrlPath)
         //'return-url': FormatUrl.format(hostname, config.services.payment.returnUrlPath)
     };
     const body = paymentData.createPaymentData(data);
